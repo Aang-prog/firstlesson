@@ -1,18 +1,13 @@
 function CalcButtons(props) {
     return (
 <div>
-  <button className="AppButton" onClick={() => props.Calculate("+")}>
-    +
-  </button>
-  <button className="AppButton" onClick={() =>props.Calculate("-")}>
-    -
-  </button>
-  <button className="AppButton" onClick={() => props.Calculate("X")}>
-    X
-  </button>
-  <button className="AppButton" onClick={() => props.Calculate("/")}>
-  ÷
-  </button>
+  <button onClick={() => props.updateCalculation("+")}>+</button>
+  <button onClick={() =>props.updateCalculation("-")}>-</button>
+  <button onClick={() => props.updateCalculation("*")}>x</button>
+  <button onClick={() => props.updateCalculation("/")}>÷</button>
+  <button onClick={() => props.updateCalculation("=")}>=</button>
+  <button onClick={() => props.updateCalculation("clear")}>C</button>
+  
 </div>
     );
 }
